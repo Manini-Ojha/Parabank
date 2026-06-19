@@ -1,0 +1,7 @@
+qa:
+  baseurl:  'https://parabank.parasoft.com'
+#  ph_no: '6350186135'
+  ph_no: ''
+dev:
+  baseurl: 'https://parabank.parasoft.com'
+  ph_no: ''
