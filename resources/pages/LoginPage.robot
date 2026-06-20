@@ -9,7 +9,7 @@ Register
     [Documentation]  Registering to Para Bank account
     Sleep    3s
     Double Click Element    ${register_link}
-    Wait Until Element Is Visible    ${first_name}
+    Wait Until Element Is Visible    ${first_name}  10s
     Click Element    ${first_name}
     Input Text    ${first_name}    bbq
     Input Text    ${last_name}    bbq

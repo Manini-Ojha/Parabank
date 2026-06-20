@@ -1,0 +1,6 @@
+*** Test Cases ***,${UserFirstname},${UserLastname},${UserAddress},${UserCity},${UserState},${UserZipcode},${Phno},${UserSSN},${UserUsername},${UserPwd},${Confirm}
+Register alexc,Alexander,Chen,"742 Birch Street",Boston,MA,02101,5551234567,234567,alexchen,SecureP@ss1,SecureP@ss1
+Register jordanm,Jordan,Martinez,"189 Walnut Court",Phoenix,AZ,85001,5559876543,345678,jordanm23,MyP@ssw0rd,MyP@ssw0rd
+Register caseyk,Casey,Kumar,"567 Elm Boulevard",Houston,TX,77001,5552345678,456789,caseyk77,StrongPass@2,StrongPass@2
+Register harperp,Harper,Patel,"923 Spruce Lane",Philadelphia,PA,19101,5553456789,567890,harperp01,ValidPass@99,ValidPass@99
+Register morgant,Morgan,Thompson,"456 Ash Avenue",Los Angeles,CA,90001,5554567890,678901,morganthm,Secure@Pass3,Secure@Pass3

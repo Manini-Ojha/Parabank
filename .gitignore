@@ -23,6 +23,7 @@ report.html
 debug.log
 *.robotdebug
 output/
+log/
 
 # ================================
 # ROBOTMETRICS OUTPUT
