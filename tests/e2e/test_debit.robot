@@ -12,31 +12,9 @@ ${money}    100
 
 *** Test Cases ***
 TC-E2E-01 - Validate API Reflects Correct Debit After UI Transfer
-    Log In To Para Bank     bbq  demo
-
-    ${login_success}=    Run Keyword And Return Status
-    ...    Page Should Contain    Accounts Overview
-
-    IF    not ${login_success}
-        Register
-        Open Checking Account Page
-        Open Saving Account Page
-    END
-
-#    Create API Session
-#
-#
-#    ${balance_before}=    Check Account Balance    ${FROM_ACCOUNT}
-#    Log To Console    Balance: ${balance_before}
-#
-#    Fund Transfer   ${money}
-#
-#    ${balance_after}=   Check Account Balance    ${FROM_ACCOUNT}
-#    Should Be Equal As Integers    ${money}    ${balance_before}-${balance_after}
-#
-#    Log To Console    Balance: ${balance_after}
-#    Log To Console    Funds Transferred: ${money}
-#    Log To Console    Difference between balances: ${balance_before}-${balance_after}
+    [Documentation]  Test case for validating that the API reflects the correct debit after a transfer is made through the UI.
+    [Tags]  e2e
+    Check Login And Ensure Multiple Accounts
     Create API Session
     Retrieve Account List
 
@@ -54,19 +32,12 @@ TC-E2E-01 - Validate API Reflects Correct Debit After UI Transfer
     ${expected_balance}=    Evaluate    ${balance_before} - ${money}
     Should Be Equal As Numbers    ${balance_after}    ${expected_balance}
 
-    Log To Console    Before: ${balance_before}, After: ${balance_after}, Transferred: ${money}
+    Log To Console    Before: ${balance_before}, After: ${balance_after}, Funds Transferred: ${money}
 
 TC-E2E-02 - Validate API Reflects Correct Credit After UI Transfer
-    Log In To Para Bank     bbq  demo
-
-    ${login_success}=    Run Keyword And Return Status
-    ...    Page Should Contain    Accounts Overview
-
-    IF    not ${login_success}
-        Register
-        Open Checking Account Page
-        Open Saving Account Page
-    END
+    [Documentation]  Test case for validating that the API reflects the correct credit after a transfer is made through the UI.
+    [Tags]  e2e
+    Check Login And Ensure Multiple Accounts
 
     Create API Session
     Retrieve Account List
@@ -88,6 +59,8 @@ TC-E2E-02 - Validate API Reflects Correct Credit After UI Transfer
     Log To Console    Before: ${balance_before}, After: ${balance_after}, Transferred: ${money}
 
 TC-HYB-03 - Create Account via UI and Validate Type & Balance via API
+    [Documentation]  Test case for creating a new account via UI and validating the account type and initial balance via API.
+    [Tags]  e2e
     Create API Session
     Check Login
     Open Saving Account Page

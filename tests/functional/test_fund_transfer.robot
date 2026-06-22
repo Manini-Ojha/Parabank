@@ -13,16 +13,7 @@ Suite Teardown  Close Application
 TC-TF-UI-01 - Verify Fund Transfer Between Two Accounts
     [Documentation]     verifying the transfer of funds from one account to another
     [Tags]      functional
-    Log In To Para Bank     bbq  demo
-
-    ${login_success}=    Run Keyword And Return Status
-    ...    Page Should Contain    Accounts Overview
-
-    IF    not ${login_success}
-        Register
-        Open Checking Account Page
-        Open Saving Account Page
-    END
+    Check Login And Ensure Multiple Accounts
 
     Check Balance All
     Fund Transfer   100

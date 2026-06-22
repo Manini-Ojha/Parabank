@@ -31,5 +31,3 @@ Log in to Para Bank
     Input Text    ${usern}    ${USER}
     Input Text    ${pwd}    ${PAWD}
     Click Element    ${login_btn}
-
-#    ${main_account}= Get Text   ${main_account}

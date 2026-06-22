@@ -10,31 +10,32 @@ Test Teardown  Close Application
 
 *** Test Cases ***
 TC-API-01 - Retrieve Account List Successfully
+    [Documentation]  Test case for retrieving account list successfully
+    [Tags]  api
     Create API Session
     #there is an api for login but not for registration
-
-    Log In To Para Bank  bbq  demo
-
-    ${login_failed}=    Run Keyword And Return Status
-    ...    Page Should Contain    The username and password could not be verified.
-
-    IF    ${login_failed}
-        Register
-    END
+    Check Login
     Retrieve Account List
 
 TC-API-02 - Validate Newly Created Account Exists in API
+    [Documentation]  Test case for validating newly created account exists in API
+    [Tags]  api
     Create API Session
     Check Login
-    Existence of Newly Created Account
     Retrieve Account List
+    Existence of Newly Created Account
+
 TC-API-03 - Validate Account Type in API Response
+    [Documentation]  Test case for validating account type in API response
+    [Tags]  api
     Create API Session
     Check Login
     Retrieve Account List
     Account Type    SAVINGS
 
 TC-API-04 - Validate Account Balance is Numeric and Non-Negative
+    [Documentation]  Test case for validating account balance is numeric and non-negative
+    [Tags]  api
     Create API Session
     Check Login
     Retrieve Account List
@@ -42,6 +43,8 @@ TC-API-04 - Validate Account Balance is Numeric and Non-Negative
     ${acc_id}=    Get From Dictionary    ${an_account}    id
     Is Account Balance Valid    ${acc_id}
 TC-API-05 - Validate Invalid Account ID Returns Error
+    [Documentation]  Test case for validating invalid account id returns error
+    [Tags]  api
     Create API Session
     Check Login
     Is Account Valid    1
