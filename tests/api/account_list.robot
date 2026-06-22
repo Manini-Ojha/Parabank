@@ -35,7 +35,7 @@ TC-API-03 - Validate Account Type in API Response
 
 TC-API-04 - Validate Account Balance is Numeric and Non-Negative
     [Documentation]  Test case for validating account balance is numeric and non-negative
-    [Tags]  api
+    [Tags]  defect
     Create API Session
     Check Login
     Retrieve Account List
